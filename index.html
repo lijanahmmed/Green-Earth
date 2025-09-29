@@ -82,7 +82,58 @@
 
     <!-- Main Section Start -->
     <main class="pt-15 bg-green-50">
+        <!-- API Section Start -->
+        <h2 class="text-center text-2xl font-bold">Choose Your Trees</h2>
+        <section class="w-11/12 mx-auto mt-15 lg:grid grid-cols-12 gap-2">
 
+            <!-- Categories Section -->
+            <div class="col-span-2">
+                <p class="text-xl font-bold text-center lg:text-start">Categories</p>
+                <div id="categories-container" class="space-y-1 lg:space-y-0 text-center lg:text-start mt-2">
+
+                </div>
+            </div>
+
+            <!-- Card Container Section -->
+            <div id="card-container"
+                class="col-span-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 mt-10 lg:mt-0">
+
+            </div>
+
+            <!-- Spinner Section -->
+            <div id="spinner" class="col-span-8 flex justify-center hidden">
+                <span class="loading loading-dots loading-xl"></span>
+            </div>
+
+            <!-- Cart List Section -->
+            <div class="col-span-2 mt-10 lg:mt-0 bg-white p-3">
+                <h3 class="text-ls font-bold">Your Cart</h3>
+                <div id="cart-container"></div>
+                <hr>
+                <div id="total-cost" class="flex justify-between items-center text-gray-500 hidden">
+
+                    <p class="font-bold">Total :</p>
+                    <p>৳<span id="total-price">0</span></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Modal Section -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="details-container"></div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- API Section End -->
 
         <!-- Campaign Section  Start-->
         <section class="mt-25 pb-16 w-11/12 lg:w-8/12 mx-auto">
@@ -153,6 +204,10 @@
         <p class="w-11/12 mx-auto text-center text-white">© 2025 Green Earth. All Rights Reserved.</p>
      </footer>
 
+
+
+    <!-- JavaScript Connect -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
